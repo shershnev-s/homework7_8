@@ -1,0 +1,2 @@
+create table user(id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL, username VARCHAR(40), password VARCHAR(40), is_active TINYINT(1), user_group_id  INT(11),  age INT(11), FOREIGN KEY(user_group_id) REFERENCES user_group(id));
+create table user_information(user_id INT(11) PRIMARY KEY NOT NULL, address VARCHAR(100),telephone VARCHAR(40), FOREIGN KEY(user_id) REFERENCES user (id) ON DELETE CASCADE);
